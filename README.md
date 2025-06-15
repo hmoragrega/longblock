@@ -54,7 +54,7 @@ Compile with `--tags debug` to enable the debug module.
 
 Then when launching your node configure the debug behaviour using CLI flags:
 
-### Flags
+### 🚩 Flags
 * `debug.pause-allowed`: enables the pause/resume functionality
 * `debug.pause-on-each-block`: pauses after every block
 * `debug.pause-skip N`: skips the first N blocks before pausing
@@ -62,7 +62,7 @@ Then when launching your node configure the debug behaviour using CLI flags:
 ```bash
 longblocked start \
 --debug.pause-allowed=true \ 
---debug.pause-on-each-block=true \ # Enables pausing after every block
+--debug.pause-on-each-block=true \
 --debug.pause-skip=5
 ```
 
