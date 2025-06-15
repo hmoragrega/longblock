@@ -1,0 +1,39 @@
+syntax = "proto3";
+package hmoragrega.longblock.debug.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/hmoragrega/longblock/debug/v1/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  // Pause
+  rpc Pause(google.protobuf.Empty)
+      returns (PauseResponse) {
+    option (google.api.http).get = "/longblock/debug/v1/pause";
+  }
+
+  // Resume resumes the node after pausing
+  rpc Resume(google.protobuf.Empty)
+      returns (ResumeResponse) {
+    option (google.api.http).get = "/longblock/debug/v1/resume";
+  }
+}
+
+// PauseResponse describes the response for the Pause operation.
+message PauseResponse {
+  string msg = 1;
+  bool success = 2;
+}
+
+// ResumeResponse describes the response for the Resume operation.
+message ResumeResponse {
+  string msg = 1;
+  bool success = 2;
+}
+
+// IsPausedResponse tells whether the node is paused or not.
+message IsPausedResponse {
+  bool isPaused = 1;
+}
