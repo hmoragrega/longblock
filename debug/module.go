@@ -18,7 +18,7 @@ import (
 	"github.com/hmoragrega/longblock/pkg/pauser"
 )
 
-const ModuleName = "debug"
+const ModuleName = "longblock-debug"
 
 const (
 	FlagPauseOnEachBlock = "debug.pause-on-each-block"
